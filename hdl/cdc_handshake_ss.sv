@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module cdc_handshake_ss (
     input  logic source_clk,       // Source domain clock
     input  logic source_reset_n,   // Source clock reset active low

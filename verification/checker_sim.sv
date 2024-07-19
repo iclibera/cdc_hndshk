@@ -1,4 +1,6 @@
-module checker(
+`timescale 1ns / 1ps
+
+module checker_sim (
     input  logic        dest_clk,
     input  logic        dest_reset_n,
     input  logic        dest_strobe,
@@ -8,7 +10,7 @@ module checker(
         error_count = 0;
     end
 
-    always @(posedge dest_clk) begin
+    always_ff @(posedge dest_clk or negedge dest_reset_n) begin
         if (!dest_reset_n) begin
             // Reset error counter on reset
             error_count <= 0;

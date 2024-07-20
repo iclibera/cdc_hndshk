@@ -1,6 +1,5 @@
 # Sets up the directory and log file
-cd ./simulation
-vlog -work work -sv tb_cdc_handshake_ss.sv cdc_handshake_ss.sv
+vlog -work work -sv tb_cdc_handshake_ss.sv ../hdl/cdc_handshake_ss.sv
 echo "Compilation Complete"
 
 # Loads the simulation

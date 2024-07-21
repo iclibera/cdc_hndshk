@@ -11,7 +11,7 @@ There are one RTL and 3 testbench files: \
 \
 RTL = `hdl/cdc_handshake_ss.sv` \
 Testbench = `verification/tb_cdc_handshake_ss.sv` \
-Submdoules = `verification/stimulus_sim.sv` and `verification/checker_sim.sv` \
+Submodules = `verification/stimulus_sim.sv` and `verification/checker_sim.sv` \
 \
 `questa.do` file is run on Questa/ModelSim to create and run a simulation. \
 \

@@ -3,7 +3,7 @@
 ```
 git clone https://github.com/iclibera/cdc_hndshk.git
 cd cdc_hndshk/
-vsim -c -do verification/questa.do
+vsim -c -do verification/questa/questa.do
 ```
 ### Explanation
 There are one RTL and 3 testbench files: \

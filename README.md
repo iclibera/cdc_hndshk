@@ -6,7 +6,13 @@ cd cdc_hndshk/
 vsim -c -do verification/questa.do
 ```
 ### Explanation
-There are one RTL and 3 testbench files. \
+There are one RTL and 3 testbench files: \
+\
+RTL = `cdc_handshake_ss.sv` \
+Testbench = `tb_cdc_handshake_ss.sv` \
+Submdoules = `stimulus_sim.sv` and `checker_sim.sv` \
+\
+`questa.do` file is run on Questa/ModelSim to create and run a simulation. \
 \
 Testbench wrapps RTL and stimulus/checker files under it. \
 \

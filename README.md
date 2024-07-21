@@ -1,5 +1,6 @@
 # CDC Handshake Module and Testbench
 ## Example simulation on Questa/ModelSim
+### On Windows Command Prompt
 ```
 git clone https://github.com/iclibera/cdc_hndshk.git
 cd cdc_hndshk/

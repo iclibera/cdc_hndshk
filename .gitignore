@@ -5,3 +5,9 @@ vsim.wlf
 wlft*
 verification/wave.do
 wave.do
+vivado.jou
+vivado.log
+sim_snapshot.wdb
+xelab*
+xvlog*
+xsim.dir/

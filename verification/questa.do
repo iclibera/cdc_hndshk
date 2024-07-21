@@ -1,25 +1,26 @@
-# Sets up the directory and log file
-vlog -work work -sv tb_cdc_handshake_ss.sv ../hdl/cdc_handshake_ss.sv
+# Sets up the directory
+vlog -work work -sv verification/checker_sim.sv verification/stimulus_sim.sv verification/tb_cdc_handshake_ss.sv hdl/cdc_handshake_ss.sv
 echo "Compilation Complete"
 
 # Loads the simulation
-vsim -novopt work.tb_cdc_handshake_ss
-echo "Simulation Model Loaded"
+vopt work.tb_cdc_handshake_ss -o optimized_tb +acc
+echo "Simulation loaded"
 
-# Sets simulation resolution and time
+# Sets simulation library
 vlib work
-vtimeformat -unit ns -precision 1
-echo "Time format set to nanoseconds"
-
-# Applies simulation runtime options
-add wave -position end sim:/*
-log -r /*
 
 # Runs the simulation
+vsim -vopt optimized_tb
+
+# Applies simulation runtime options
+add wave -position end -radix unsigned /tb_cdc_handshake_ss/error_count
+add wave -position end -radix unsigned /tb_cdc_handshake_ss/stimulus_inst/*
+# Leaf toggle
+config wave -signalnamewidth 1
+
 run -all
 echo "Simulation run complete"
 
-# Optional
 # stop
 # quit
 

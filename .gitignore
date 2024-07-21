@@ -1,3 +1,7 @@
 verification/obj_dir/
-verification/obj_dir/*
-verification/transcript
+work
+transcript
+vsim.wlf
+wlft*
+verification/wave.do
+wave.do

@@ -9,9 +9,9 @@ vsim -c -do verification/questa/questa.do
 ### Explanation
 There are one RTL and 3 testbench files: \
 \
-RTL = `cdc_handshake_ss.sv` \
-Testbench = `tb_cdc_handshake_ss.sv` \
-Submdoules = `stimulus_sim.sv` and `checker_sim.sv` \
+RTL = `hdl/cdc_handshake_ss.sv` \
+Testbench = `verification/tb_cdc_handshake_ss.sv` \
+Submdoules = `verification/stimulus_sim.sv` and `verification/checker_sim.sv` \
 \
 `questa.do` file is run on Questa/ModelSim to create and run a simulation. \
 \

@@ -4,14 +4,14 @@
 ```
 git clone https://github.com/iclibera/cdc_hndshk.git
 cd cdc_hndshk/
-vsim -c -do verification/questa/questa.do
+vsim -c -do sim/questa/questa.do
 ```
 ### Explanation
 There are one RTL and 3 testbench files: \
 \
 RTL = `hdl/cdc_handshake_ss.sv` \
-Testbench = `verification/tb_cdc_handshake_ss.sv` \
-Submodules = `verification/stimulus_sim.sv` and `verification/checker_sim.sv` \
+Testbench = `sim/tb_cdc_handshake_ss.sv` \
+Submodules = `sim/stimulus_sim.sv` and `sim/checker_sim.sv` \
 \
 `questa.do` file is run on Questa/ModelSim to create and run a simulation. \
 \
@@ -28,10 +28,10 @@ In order to change the random set of clock periods, apply different seed values 
 Not supported yet. (some progress)
 ## Usage on Vivado Simulator (XSim)
 Not supported yet. (some progress)
-## HDL and Verification folders
+## HDL and Simulatiomn folders
 ### hdl
 CDC Handshake module lives under hdl/
-### verification
-Testbench and other files regarding simulation live under verification/ folder
+### sim
+Testbench and other files regarding simulation live under sim/ folder
 ## Snapshot of waves
 ![wave_snapshot](https://github.com/user-attachments/assets/cd69bb2f-38cd-4d33-9fa3-8e6f2914cc9b)

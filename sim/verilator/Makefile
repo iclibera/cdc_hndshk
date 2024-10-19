@@ -1,8 +1,8 @@
 VERILATOR = verilator
-VERILATOR_FLAGS = -Wall --cc --trace --timing --exe --top-module verification/tb_cdc_handshake_ss
+VERILATOR_FLAGS = -Wall --cc --trace --timing --exe --top-module sim/testbench
 
 # Source and testbench files
-VFILES = hdl/cdc_handshake_ss.sv verification/stimulus_sim.sv verification/checker_sim.sv verification/tb_cdc_handshake_ss.sv
+VFILES = hdl/cdc_handshake_ss.sv sim/stimulus_sim.sv sim/checker_sim.sv sim/testbench.sv
 
 # Target executable
 EXE = sim
@@ -20,7 +20,7 @@ LDFLAGS += -L/usr/local/lib  # Linker flags if needed
 all: $(EXE)
 
 $(EXE): $(VFILES) $(CPP_SOURCE)
-	$(VERILATOR) $(VERILATOR_FLAGS) --build -o $(EXE) tb_cdc_handshake_ss.sv $(CPP_SOURCE)
+	$(VERILATOR) $(VERILATOR_FLAGS) --build -o $(EXE) testbench.sv $(CPP_SOURCE)
 	./$(EXE)
 
 clean:

@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module tb_cdc_handshake_ss;
+module testbench;
 
     logic source_clk, source_reset_n, source_strobe, source_stall, dest_clk, dest_reset_n, dest_strobe, dest_stall, sim_done;
     logic [31:0] error_count;

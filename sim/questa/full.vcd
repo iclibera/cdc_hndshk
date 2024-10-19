@@ -7,7 +7,7 @@ $end
 $timescale
 	1ps
 $end
-$scope module tb_cdc_handshake_ss $end
+$scope module testbench $end
 $scope module stimulus_inst $end
 $var wire 1 ! dest_strobe $end
 $upscope $end

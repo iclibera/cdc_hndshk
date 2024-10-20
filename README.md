@@ -1,7 +1,8 @@
 # CDC Handshake Module and Testbench
 ## Example simulation on Questa/ModelSim
-### On Windows Command Prompt
+### On Windows Command Prompt (assuming QuestaSim/ModelSim installed)
 ```
+git clone https://github.com/iclibera/common_rtl.git
 git clone https://github.com/iclibera/cdc_hndshk.git
 cd cdc_hndshk/
 vsim -c -do sim/questa/questa.do
